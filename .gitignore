@@ -1,1 +1,6 @@
-*/.idea
+# IntelliJ Files
+.idea
+*.iml
+
+# Java Outputs
+out
