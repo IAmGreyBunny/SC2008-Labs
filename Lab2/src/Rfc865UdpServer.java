@@ -34,7 +34,8 @@ public class Rfc865UdpServer {
 
 
                 // 3. Send UDP reply to client
-                DatagramPacket reply = new DatagramPacket(messageBuffer, messageBuffer.length, request.getAddress(), clientPortNumber);
+                byte[] replyMessageBuffer = message.getBytes();
+                DatagramPacket reply = new DatagramPacket(replyMessageBuffer, replyMessageBuffer.length, request.getAddress(), clientPortNumber);
                 socket.send(reply);
                 String replyMessage = new String(reply.getData(),reply.getOffset(),reply.getLength(), StandardCharsets.US_ASCII);
                 System.out.print("Reply Sent: " + replyMessage);
