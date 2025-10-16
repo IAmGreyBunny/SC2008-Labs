@@ -4,3 +4,7 @@
 
 # Java Outputs
 out
+
+# Python Environments
+venv
+.ipynb_checkpoints
